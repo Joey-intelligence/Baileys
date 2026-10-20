@@ -1,0 +1,20 @@
+[Unit]
+Description=Baileys WhatsApp daemon for Muse
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /home/hatch/workspace/integrations/baileys-v7/src/index.js
+WorkingDirectory=/home/hatch/workspace/integrations/baileys-v7
+Environment=WA_AUTH_DIR=/home/hatch/workspace/integrations/baileys/auth
+Environment=WA_DATA_DIR=/home/hatch/workspace/integrations/baileys/data
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=300
+StartLimitBurst=20
+TimeoutStopSec=15
+KillMode=control-group
+
+[Install]
+WantedBy=default.target

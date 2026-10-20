@@ -1,0 +1,12 @@
+{
+  "name": "baileys-daemon-joey",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "WhatsApp daemon used by Joey, running on this fork of Baileys 7.x. See README.md.",
+  "dependencies": {
+    "baileys": "file:..",
+    "https-proxy-agent": "^7.0.6",
+    "pino": "^9.5.0"
+  }
+}
